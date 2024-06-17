@@ -1,0 +1,115 @@
+$primary-color: #ff6347; // Tomato
+$secondary-color: #48d1cc; // MediumTurquoise
+$accent-color: #ffd700; // Gold
+$background-color: #282c34; // Dark Slate Grey
+$text-color: #ffffff; // White
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin floating-shapes($color, $size) {
+  content: '';
+  position: absolute;
+  background-color: $color;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  color: $text-color;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Jersey 10', sans-serif;
+  background-image: url('https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492200517/articles/2014/04/16/matisse-innovator-until-the-end/140415-Henri-Matisse-tease_hkki3f');
+  background-repeat: no-repeat;
+
+  h1 {
+    font-size: 4em;
+    margin: 0;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 5s infinite alternate;
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  }
+  h3 {
+    color:#ffd700;
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: $accent-color;
+  }
+
+  .cta-button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $text-color;
+    background-color: $primary-color;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4.3px;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  .shape {
+    @include floating-shapes($primary-color, 100px);
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .cta-button {
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+
+    .shape {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}

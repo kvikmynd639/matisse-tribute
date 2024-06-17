@@ -7,6 +7,7 @@ import {
 import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
+import Navbar from "./components/Navbar";
 
 export default component$(() => {
   /**
@@ -24,8 +25,12 @@ export default component$(() => {
         <RouterHead />
       </head>
       <body lang="en">
+       <Navbar/>
         <RouterOutlet />
+        
         <ServiceWorkerRegister />
+        
+  
       </body>
     </QwikCityProvider>
   );

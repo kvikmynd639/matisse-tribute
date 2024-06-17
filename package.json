@@ -24,7 +24,9 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "build:sass": "sass src/styles/main.scss src/styles/main.css --no-source-map",
+    "watch:sass": "sass --watch src/styles/main.scss:src/styles/main.css --no-source-map"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.5.7",
@@ -40,5 +42,11 @@
     "undici": "*",
     "vite": "^5.2.10",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "react-router-dom": "^6.23.1",
+    "sass": "^1.77.5",
+    "three": "^0.165.0"
   }
 }
