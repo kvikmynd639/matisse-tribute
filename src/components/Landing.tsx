@@ -21,7 +21,7 @@ export default component$(() => {
       <section class="quote-section">
         <blockquote>"There are always flowers for those who want to see them." - Henri Matisse</blockquote>
       </section>
-      <section class="about-section">
+      <section class="about-section red">
         <div class="text">
           <h2>About Henri Matisse</h2>
           <p>
@@ -31,6 +31,21 @@ export default component$(() => {
         <div class="image">
           <img src="https://www.redhouseoriginals.com/wp-content/uploads/Mattisse-B-and-W_FINAL.jpg" width="600" height="400" alt="Henri Matisse" />
         </div>
+      </section>
+
+      <section class="about-section purple">
+        <div class="image">
+          <img src="https://i.ebayimg.com/images/g/TgYAAOSwY~1Z64pc/s-l1600.jpg" width="600" height="400" alt="Henri Matisse" />
+        </div>
+        <div class="text">
+          <h2>This is Fauvism</h2>
+          <p>
+            Henri Matisse was a French artist, known for his use of color and his fluid and original draughtsmanship. As a draughtsman, printmaker, and sculptor, but principally as a painter, Matisse is commonly regarded, along with Pablo Picasso, as one of the artists who best helped to define the revolutionary developments in the visual arts throughout the opening decades of the twentieth century.
+          </p>
+          
+
+        </div>
+
       </section>
 
         </section>

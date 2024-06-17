@@ -8,6 +8,7 @@ import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default component$(() => {
   /**
@@ -29,8 +30,7 @@ export default component$(() => {
         <RouterOutlet />
         
         <ServiceWorkerRegister />
-        
-  
+        <Footer/>
       </body>
     </QwikCityProvider>
   );
