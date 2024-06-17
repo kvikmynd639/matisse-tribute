@@ -4,11 +4,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import "../styles/main.scss";
+import Landing from "~/components/Landing";
 
 export default component$(() => {
   return (
     <>
       <HeroSection />
+      <Landing/>
       
     </>
   );

@@ -1,0 +1,104 @@
+// src/styles/home.scss
+
+$primary-color: #ff6347; // Tomato
+$secondary-color: #48d1cc; // MediumTurquoise
+$accent-color: #ffd700; // Gold
+$background-color: #282c34; // Dark Slate Grey
+$text-color: #ffffff; // White
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.home {
+  .quote-section {
+    padding: 40px 20px;
+    background-color: $primary-color;
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    color: $text-color;
+  }
+
+  .painting-text-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+
+    .painting,
+    .text {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .painting img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: $accent-color;
+      }
+
+      p {
+        font-size: 1.2em;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: $secondary-color;
+
+    .text,
+    .image {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: $accent-color;
+      }
+
+      p {
+        font-size: 1.2em;
+        line-height: 1.6;
+      }
+    }
+
+    .image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    .painting-text-section,
+    .about-section {
+      flex-direction: column;
+    }
+  }
+}
