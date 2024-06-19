@@ -28,7 +28,6 @@ export default component$(() => {
       <body lang="en">
        <Navbar/>
         <RouterOutlet />
-        
         <ServiceWorkerRegister />
         <Footer/>
       </body>

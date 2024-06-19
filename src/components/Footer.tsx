@@ -5,23 +5,24 @@ import '../styles/footer.scss';
 
 export default component$(() => {
   return (
-    <footer class="matisse-footer">
-    <div class="footer-background">
-      <div class="shape shape1"></div>
-      <div class="shape shape2"></div>
-      {/*<div class="shape shape3"></div*/}
-      {/*<div class="shape shape4"></div>*/}
-    </div>
-    <div class="footer-content">
-      <div class="footer-logo">Matisse Style</div>
-      {/*<nav class="footer-nav">
-        <a href="#home">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>*/}
-      <div class="footer-info">
-        <p>&copy; 2024 Matisse Inspired Art. All rights reserved.</p>
+    <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="footer-title">About Us</h2>
+        <p class="footer-text">We create beautiful art-inspired designs that are both modern and timeless.</p>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-title">Contact</h2>
+        <p class="footer-text">Email: info@artdesign.com</p>
+        <p class="footer-text">Phone: +123 456 7890</p>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-title">Follow Us</h2>
+        <div class="footer-icons">
+          <a href="#" class="footer-icon-link"><i class="icon icon-facebook"></i></a>
+          <a href="#" class="footer-icon-link"><i class="icon icon-twitter"></i></a>
+          <a href="#" class="footer-icon-link"><i class="icon icon-instagram"></i></a>
+        </div>
       </div>
     </div>
   </footer>
