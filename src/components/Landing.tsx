@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import '../styles/home.scss';
-import Footer from "./Footer";
 
 export default component$(() => {
     return(

@@ -1,10 +1,8 @@
-// src/components/HeroSection.tsx
 
-import { component$} from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 import '../styles/hero.scss';
 
 export default component$(() => {
-  // Sample paintings data (you can replace with your own images)
   const paintings = [
     { imageUrl: 'https://www.singulart.com/blog/wp-content/uploads/2023/08/image-83.png', title: 'Painting 1' },
     { imageUrl: 'https://www.irishtimes.com/resizer/aGD4-8ejplGdI9kK-ZL1vzGjY4I=/1600x1600/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/irishtimes/UW4TCCUFBHD4AWXFN36V2537JA.jpg', title: 'Painting 2' },
@@ -19,7 +17,6 @@ export default component$(() => {
     { imageUrl: 'https://www.tallengestore.com/cdn/shop/products/Portrait_of_Henri_Matisse_ee89eba8-4d69-4434-ab6f-09f8f58b2818.jpg?v=1569136160', title: 'Painting 11' },
     {imageUrl: 'https://wooarts.com/wp-content/uploads/sites/1/nggallery/henri-matisse-landscape/henri-matisse-landscape-painting-the-luxembourg-gardens.jpg', title:'Painting 12'},
   ];
-
 
   return (
     <div class="hero-section">
