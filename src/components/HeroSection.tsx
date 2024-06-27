@@ -20,9 +20,6 @@ export default component$(() => {
     {imageUrl: 'https://wooarts.com/wp-content/uploads/sites/1/nggallery/henri-matisse-landscape/henri-matisse-landscape-painting-the-luxembourg-gardens.jpg', title:'Painting 12'},
   ];
 
-  const handleClick = (imageUrl: string, title: string) => {
-    emit('paintingClicked', { imageUrl, title });
-  };
 
   return (
     <div class="hero-section">
