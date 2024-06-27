@@ -1,55 +1,82 @@
+$primary-color: #ff6347; // Tomato
+$secondary-color: #48d1cc; // MediumTurquoise
+$accent-color: #ffd700; // Gold
+$background-color: #282c34; // Dark Slate Grey
+$text-color: #ffffff; // White
+$freaky-pink: #ff00ff; // Magenta
+$wild-green: #00ff00; // Lime Green
+$bright-blue: #0000ff; // Bright Blue
+$electric-yellow: #ffff00; // Electric Yellow
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Jersey 10', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
 .gallery {
-    padding: 2em;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
+  padding: 2em;
+  color: $text-color;
+  font-family: 'Jersey 10', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-  
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-  
-    &-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-      justify-content: center;
-    }
-  
-    &-item {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1em;
-      width: 300px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-  
-      &:hover {
-        transform: translateY(-10px);
-      }
-    }
-  
-    &-image {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 1em;
-    }
-  
-    &-title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-  
-    &-description {
-      font-size: 1rem;
-      color: #666;
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: $freaky-pink;
+    transform: rotate(-5deg);
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: $wild-green;
+    transform: rotate(5deg);
+  }
+
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    transform: skew(5deg);
+  }
+
+  &-item {
+    background: $bright-blue;
+    border: 2px solid $electric-yellow;
+    border-radius: 12px;
+    padding: 1em;
+    width: 300px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    transform: rotate(-5deg);
+
+    &:hover {
+      transform: translateY(-10px) rotate(5deg);
     }
   }
-  
+
+  &-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    border: 4px solid $freaky-pink;
+  }
+
+  &-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: $accent-color;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    color: $wild-green;
+  }
+}

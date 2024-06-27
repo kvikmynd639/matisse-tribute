@@ -1,69 +1,109 @@
-// src/components/Biography.scss
+$primary-color: #ff6347; // Tomato
+$secondary-color: #48d1cc; // MediumTurquoise
+$accent-color: #ffd700; // Gold
+$background-color: #282c34; // Dark Slate Grey
+$text-color: #ffffff; // White
+$freaky-pink: #ff00ff; // Magenta
+$wild-green: #00ff00; // Lime Green
+$bright-blue: #0000ff; // Bright Blue
+$electric-yellow: #ffff00; // Electric Yellow
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Jersey 10', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
 
 .biography {
-    padding: 2rem;
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-  
-    .bio-header {
-      text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $text-color;
+  text-align: center;
+
+  .bio-header {
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: $electric-yellow;
+    padding: 1rem;
+    border: 5px solid $bright-blue;
+    transform: skew(-10deg);
+
+    h1 {
+      font-size: 4rem;
+      color: $freaky-pink;
+      margin: 0;
+      transform: rotate(-5deg);
+    }
+
+    p {
+      font-size: 2rem;
+      color: $wild-green;
+      margin: 0;
+      transform: rotate(5deg);
+    }
+  }
+
+  .bio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: skew(5deg);
+
+    .bio-image {
       margin-bottom: 2rem;
-  
-      h1 {
-        font-size: 3rem;
-        color: #0077b6;
+      transform: rotate(-10deg);
+
+      img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border: 10px solid $freaky-pink;
+        box-shadow: 0 0 20px $wild-green;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: rotate(10deg) scale(1.1);
+        }
       }
-  
+    }
+
+    .bio-text {
+      max-width: 800px;
+      text-align: justify;
+      line-height: 1.8;
+      font-size: 1.5rem;
+      background-color: $bright-blue;
+      padding: 2rem;
+      border: 5px solid $electric-yellow;
+      transform: rotate(5deg);
+
       p {
-        font-size: 1.5rem;
-        color: #ef233c;
-      }
-    }
-  
-    .bio-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      .bio-image {
         margin-bottom: 2rem;
-  
-        img {
-          border-radius: 50%;
-          width: 200px;
-          height: 200px;
-          object-fit: cover;
-          border: 5px solid #0077b6;
-        }
-      }
-  
-      .bio-text {
-        max-width: 800px;
-        text-align: justify;
-        line-height: 1.6;
-        font-size: 1.1rem;
-  
-        p {
-          margin-bottom: 1.5rem;
-        }
-      }
-    }
-  
-    @media (min-width: 768px) {
-      .bio-content {
-        flex-direction: row;
-        align-items: flex-start;
-  
-        .bio-image {
-          margin-right: 2rem;
-          margin-bottom: 0;
-        }
-  
-        .bio-text {
-          text-align: left;
-        }
+        color: $accent-color;
       }
     }
   }
-  
+
+  @media (min-width: 768px) {
+    .bio-content {
+      flex-direction: row;
+      align-items: flex-start;
+      transform: skew(-5deg);
+
+      .bio-image {
+        margin-right: 2rem;
+        margin-bottom: 0;
+        transform: rotate(10deg);
+      }
+
+      .bio-text {
+        text-align: left;
+        transform: rotate(-5deg);
+      }
+    }
+  }
+}
