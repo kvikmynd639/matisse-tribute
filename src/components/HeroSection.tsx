@@ -1,6 +1,6 @@
 // src/components/HeroSection.tsx
 
-import { component$, emit } from '@builder.io/qwik';
+import { component$} from '@builder.io/qwik';
 import '../styles/hero.scss';
 
 export default component$(() => {
