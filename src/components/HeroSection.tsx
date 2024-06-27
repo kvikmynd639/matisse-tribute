@@ -27,7 +27,7 @@ export default component$(() => {
   return (
     <div class="hero-section">
       {paintings.map((painting, index) => (
-        <div class="painting" key={index} onClick={() => handleClick(painting.imageUrl, painting.title)}>
+        <div class="painting" key={index}>
           <img src={painting.imageUrl} alt={painting.title} width="600" height="300"/>
           <div class="overlay">
             <h3>{painting.title}</h3>
